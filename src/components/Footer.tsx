@@ -133,7 +133,7 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
 								<FaFacebook className="w-5 h-5" />
-								<span>@bluesproutagency</span>
+								<span>bluesproutagency</span>
 							</a>
 							<a
 								href="https://instagram.com/bluesproutagency"
