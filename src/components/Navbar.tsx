@@ -1,7 +1,7 @@
 // components/Navbar.tsx
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Sun, Moon, Construction } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 
 // Import your logo files
 import sprtLogo192 from "../assets/sprout-logo-192.png";
