@@ -8,18 +8,14 @@ import {
 	Zap,
 	Target,
 	TrendingUp,
-	Phone,
-	Mail,
 } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 interface HeroProps {
 	isDark: boolean;
 }
 
 export const Hero: React.FC<HeroProps> = ({ isDark }) => {
-	const [isContactVisible, setIsContactVisible] = useState(false);
-	const [showFlyingPhone, setShowFlyingPhone] = useState(false);
 	const navigate = useNavigate();
 	const heroRef = useRef<HTMLElement>(null);
 
@@ -27,23 +23,10 @@ export const Hero: React.FC<HeroProps> = ({ isDark }) => {
 		const handleScroll = () => {
 			const scrollY = window.scrollY;
 			const windowHeight = window.innerHeight;
-
-			// Show contact info after scrolling 30% of viewport height
-			setIsContactVisible(scrollY > windowHeight * 0.3);
 		};
 
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
-
-	// Flying phone number effect
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setShowFlyingPhone(true);
-			setTimeout(() => setShowFlyingPhone(false), 4000);
-		}, 8000);
-
-		return () => clearInterval(interval);
 	}, []);
 
 	// Smooth scroll to contact
@@ -64,27 +47,6 @@ export const Hero: React.FC<HeroProps> = ({ isDark }) => {
 				} mt-10`}>
 				{" "}
 				{/* Added mt-10 for development banner */}
-				{/* Flying Phone Number */}
-				{showFlyingPhone && (
-					<div className="fixed top-0 left-0 w-full h-full pointer-events-none z-40 overflow-hidden">
-						<div
-							className={`absolute top-1/2 -left-96 transform -translate-y-1/2 ${
-								isDark ? "text-orange-400" : "text-teal-600"
-							} text-2xl font-bold animate-fly-across flex items-center space-x-3 bg-gradient-to-r ${
-								isDark
-									? "from-orange-500/20 to-red-500/20"
-									: "from-teal-500/20 to-blue-500/20"
-							} backdrop-blur-sm px-6 py-3 rounded-full border ${
-								isDark ? "border-orange-500/30" : "border-teal-500/30"
-							} shadow-2xl`}>
-							<Phone className="w-8 h-8 animate-bounce" />
-							<span className="text-3xl font-extrabold tracking-wider">
-								📞 (657) 217-4737
-							</span>
-							<div className="text-lg">👈 CALL NOW!</div>
-						</div>
-					</div>
-				)}
 				{/* Background Pattern */}
 				<div className="absolute inset-0 opacity-10">
 					<div
@@ -163,7 +125,7 @@ export const Hero: React.FC<HeroProps> = ({ isDark }) => {
 									className={`text-lg font-semibold ${
 										isDark ? "text-gray-200" : "text-gray-700"
 									}`}>
-									500+ Satisfied Clients
+									5+ Satisfied Clients
 								</span>
 							</div>
 							<div className="flex items-center space-x-2 animate-bounce-in animation-delay-500">
@@ -189,7 +151,7 @@ export const Hero: React.FC<HeroProps> = ({ isDark }) => {
 									className={`text-lg font-semibold ${
 										isDark ? "text-gray-200" : "text-gray-700"
 									}`}>
-									Lightning Fast
+									Lightning Fast Performance
 								</span>
 							</div>
 						</div>
@@ -310,47 +272,6 @@ export const Hero: React.FC<HeroProps> = ({ isDark }) => {
 					</div>
 				</div>
 			</section>
-
-			{/* Floating Contact Info */}
-			<div
-				className={`fixed top-1/2 right-6 transform -translate-y-1/2 z-50 transition-all duration-500 ${
-					isContactVisible
-						? "translate-x-0 opacity-100"
-						: "translate-x-full opacity-0"
-				}`}>
-				<div
-					className={`flex flex-col space-y-4 p-4 rounded-xl backdrop-blur-md shadow-2xl ${
-						isDark
-							? "bg-gray-900/90 border border-gray-700"
-							: "bg-white/90 border border-gray-200"
-					}`}>
-					<a
-						href="tel:+16572174737"
-						className={`group flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 hover:scale-105 animate-pulse ${
-							isDark
-								? "hover:bg-gray-800 text-gray-200 hover:text-purple-400"
-								: "hover:bg-gray-50 text-gray-700 hover:text-purple-600"
-						}`}>
-						<Phone className="w-5 h-5 animate-ring" />
-						<span className="text-sm font-medium whitespace-nowrap">
-							Call Us
-						</span>
-					</a>
-
-					<a
-						href="mailto:support@bluesproutagency.com"
-						className={`group flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 hover:scale-105 ${
-							isDark
-								? "hover:bg-gray-800 text-gray-200 hover:text-cyan-400"
-								: "hover:bg-gray-50 text-gray-700 hover:text-cyan-600"
-						}`}>
-						<Mail className="w-5 h-5" />
-						<span className="text-sm font-medium whitespace-nowrap">
-							Email Us
-						</span>
-					</a>
-				</div>
-			</div>
 
 			{/* CSS Animations */}
 			<style>{`

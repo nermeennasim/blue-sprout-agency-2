@@ -52,104 +52,405 @@ const Services: React.FC<ServicesProps> = ({ isDark }) => {
 						</p>
 					</div>
 
-					<div className="grid lg:grid-cols-2 gap-8">
-						<div className="space-y-6">
+					{/* Types of Web Development Cards */}
+					<div className="mb-8">
+						<h3
+							className={`text-2xl font-bold text-center mb-6 ${
+								isDark ? "text-white" : "text-gray-900"
+							}`}>
+							Types of Web Development & Design
+						</h3>
+
+						<div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+							{/* Custom Web Applications */}
 							<div
-								className={`p-6 rounded-xl ${
-									isDark ? "bg-gray-800/50" : "bg-gray-100/50"
+								className={`p-6 rounded-2xl shadow-xl border ${
+									isDark
+										? "bg-gray-800 border-gray-700"
+										: "bg-white border-gray-200"
 								}`}>
-								<h4
-									className={`font-bold text-lg mb-3 ${
-										isDark ? "text-white" : "text-gray-900"
+								<div className="text-center mb-4">
+									<div
+										className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-3 ${
+											isDark ? "bg-blue-900/30" : "bg-blue-100"
+										}`}>
+										<span className="text-xl">⚙️</span>
+									</div>
+									<h4
+										className={`font-bold text-lg ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										Custom Web Applications
+									</h4>
+								</div>
+								<p
+									className={`text-sm text-center ${
+										isDark ? "text-gray-300" : "text-gray-600"
 									}`}>
-									📱 Responsive Design
-								</h4>
-								<p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
-									Mobile-first designs that look perfect on all devices -
-									phones, tablets, and desktops
+									Tailored web apps built from scratch for your specific
+									business needs
 								</p>
 							</div>
 
+							{/* Landing Pages */}
 							<div
-								className={`p-6 rounded-xl ${
-									isDark ? "bg-gray-800/50" : "bg-gray-100/50"
+								className={`p-6 rounded-2xl shadow-xl border ${
+									isDark
+										? "bg-gray-800 border-gray-700"
+										: "bg-white border-gray-200"
 								}`}>
-								<h4
-									className={`font-bold text-lg mb-3 ${
-										isDark ? "text-white" : "text-gray-900"
+								<div className="text-center mb-4">
+									<div
+										className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-3 ${
+											isDark ? "bg-green-900/30" : "bg-green-100"
+										}`}>
+										<span className="text-xl">🎯</span>
+									</div>
+									<h4
+										className={`font-bold text-lg ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										Landing Pages
+									</h4>
+								</div>
+								<p
+									className={`text-sm text-center ${
+										isDark ? "text-gray-300" : "text-gray-600"
 									}`}>
-									⚡ Modern Performance
-								</h4>
-								<p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
-									Fast-loading websites built with cutting-edge technologies
-									like React and Next.js
+									High-converting landing pages designed to turn visitors into
+									customers
 								</p>
 							</div>
 
+							{/* Portfolio Pages */}
 							<div
-								className={`p-6 rounded-xl ${
-									isDark ? "bg-gray-800/50" : "bg-gray-100/50"
+								className={`p-6 rounded-2xl shadow-xl border ${
+									isDark
+										? "bg-gray-800 border-gray-700"
+										: "bg-white border-gray-200"
 								}`}>
-								<h4
-									className={`font-bold text-lg mb-3 ${
-										isDark ? "text-white" : "text-gray-900"
+								<div className="text-center mb-4">
+									<div
+										className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-3 ${
+											isDark ? "bg-purple-900/30" : "bg-purple-100"
+										}`}>
+										<span className="text-xl">🎨</span>
+									</div>
+									<h4
+										className={`font-bold text-lg ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										Portfolio Pages
+									</h4>
+								</div>
+								<p
+									className={`text-sm text-center ${
+										isDark ? "text-gray-300" : "text-gray-600"
 									}`}>
-									🔍 SEO Optimized
-								</h4>
-								<p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
-									Built-in SEO optimization to help your business rank higher in
-									search results
+									Stunning portfolio websites to showcase your work and attract
+									clients
+								</p>
+							</div>
+
+							{/* WordPress Websites */}
+							<div
+								className={`p-6 rounded-2xl shadow-xl border ${
+									isDark
+										? "bg-gray-800 border-gray-700"
+										: "bg-white border-gray-200"
+								}`}>
+								<div className="text-center mb-4">
+									<div
+										className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-3 ${
+											isDark ? "bg-indigo-900/30" : "bg-indigo-100"
+										}`}>
+										<span className="text-xl">📝</span>
+									</div>
+									<h4
+										className={`font-bold text-lg ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										WordPress Websites
+									</h4>
+								</div>
+								<p
+									className={`text-sm text-center ${
+										isDark ? "text-gray-300" : "text-gray-600"
+									}`}>
+									Custom WordPress themes and plugins for easy content
+									management
+								</p>
+							</div>
+
+							{/* Shopify E-commerce */}
+							<div
+								className={`p-6 rounded-2xl shadow-xl border ${
+									isDark
+										? "bg-gray-800 border-gray-700"
+										: "bg-white border-gray-200"
+								}`}>
+								<div className="text-center mb-4">
+									<div
+										className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-3 ${
+											isDark ? "bg-orange-900/30" : "bg-orange-100"
+										}`}>
+										<span className="text-xl">🛒</span>
+									</div>
+									<h4
+										className={`font-bold text-lg ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										Shopify E-commerce
+									</h4>
+								</div>
+								<p
+									className={`text-sm text-center ${
+										isDark ? "text-gray-300" : "text-gray-600"
+									}`}>
+									Complete online stores with payment processing and inventory
+									management
+								</p>
+							</div>
+
+							{/* SaaS Solutions */}
+							<div
+								className={`p-6 rounded-2xl shadow-xl border ${
+									isDark
+										? "bg-gray-800 border-gray-700"
+										: "bg-white border-gray-200"
+								}`}>
+								<div className="text-center mb-4">
+									<div
+										className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-3 ${
+											isDark ? "bg-yellow-900/30" : "bg-yellow-100"
+										}`}>
+										<span className="text-xl">🚀</span>
+									</div>
+									<h4
+										className={`font-bold text-lg ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										SaaS Solutions
+									</h4>
+								</div>
+								<p
+									className={`text-sm text-center ${
+										isDark ? "text-gray-300" : "text-gray-600"
+									}`}>
+									Scalable software platforms with user management and
+									subscriptions
+								</p>
+							</div>
+
+							{/* Custom Frontend & Backend */}
+							<div
+								className={`p-6 rounded-2xl shadow-xl border ${
+									isDark
+										? "bg-gray-800 border-gray-700"
+										: "bg-white border-gray-200"
+								}`}>
+								<div className="text-center mb-4">
+									<div
+										className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-3 ${
+											isDark ? "bg-cyan-900/30" : "bg-cyan-100"
+										}`}>
+										<span className="text-xl">🔧</span>
+									</div>
+									<h4
+										className={`font-bold text-lg ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										Custom Frontend & Backend
+									</h4>
+								</div>
+								<p
+									className={`text-sm text-center ${
+										isDark ? "text-gray-300" : "text-gray-600"
+									}`}>
+									Full-stack development with React/Next.js frontend and custom
+									backend APIs
+								</p>
+							</div>
+
+							{/* Content Management Systems */}
+							<div
+								className={`p-6 rounded-2xl shadow-xl border ${
+									isDark
+										? "bg-gray-800 border-gray-700"
+										: "bg-white border-gray-200"
+								}`}>
+								<div className="text-center mb-4">
+									<div
+										className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-3 ${
+											isDark ? "bg-pink-900/30" : "bg-pink-100"
+										}`}>
+										<span className="text-xl">🎛️</span>
+									</div>
+									<h4
+										className={`font-bold text-lg ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										Content Management Systems
+									</h4>
+								</div>
+								<p
+									className={`text-sm text-center ${
+										isDark ? "text-gray-300" : "text-gray-600"
+									}`}>
+									Custom CMS solutions tailored to your content workflow needs
 								</p>
 							</div>
 						</div>
+					</div>
 
-						<div className="space-y-6">
-							<div
-								className={`p-6 rounded-xl ${
-									isDark ? "bg-gray-800/50" : "bg-gray-100/50"
-								}`}>
-								<h4
-									className={`font-bold text-lg mb-3 ${
-										isDark ? "text-white" : "text-gray-900"
+					{/* Additional Features */}
+					<div className="mb-8">
+						<h3
+							className={`text-2xl font-bold text-center mb-6 ${
+								isDark ? "text-white" : "text-gray-900"
+							}`}>
+							Additional Features Included
+						</h3>
+
+						<div className="grid lg:grid-cols-2 gap-8">
+							<div className="space-y-6">
+								<div
+									className={`p-6 rounded-xl ${
+										isDark ? "bg-gray-800/50" : "bg-gray-100/50"
 									}`}>
-									🛠️ Custom Functionality
-								</h4>
-								<p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
-									Contact forms, galleries, e-commerce integration, and custom
-									features tailored to your needs
-								</p>
+									<h4
+										className={`font-bold text-lg mb-3 ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										⚡ Fast Speed & Performance
+									</h4>
+									<p
+										className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+										Optimized loading times with modern technologies like React
+										and Next.js for lightning-fast user experiences
+									</p>
+								</div>
+
+								<div
+									className={`p-6 rounded-xl ${
+										isDark ? "bg-gray-800/50" : "bg-gray-100/50"
+									}`}>
+									<h4
+										className={`font-bold text-lg mb-3 ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										📊 Analytics & Insights
+									</h4>
+									<p
+										className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+										Google Analytics setup and comprehensive reporting to track
+										your website performance and user behavior
+									</p>
+								</div>
+
+								<div
+									className={`p-6 rounded-xl ${
+										isDark ? "bg-gray-800/50" : "bg-gray-100/50"
+									}`}>
+									<h4
+										className={`font-bold text-lg mb-3 ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										🌍 Hosting & Deployment
+									</h4>
+									<p
+										className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+										Complete hosting solutions with reliable uptime, automatic
+										backups, and seamless deployment processes
+									</p>
+								</div>
+
+								<div
+									className={`p-6 rounded-xl ${
+										isDark ? "bg-gray-800/50" : "bg-gray-100/50"
+									}`}>
+									<h4
+										className={`font-bold text-lg mb-3 ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										🔍 SEO Optimization Add-On
+									</h4>
+									<p
+										className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+										Advanced SEO optimization to improve search engine rankings
+										and increase organic traffic to your website
+									</p>
+								</div>
 							</div>
 
-							<div
-								className={`p-6 rounded-xl ${
-									isDark ? "bg-gray-800/50" : "bg-gray-100/50"
-								}`}>
-								<h4
-									className={`font-bold text-lg mb-3 ${
-										isDark ? "text-white" : "text-gray-900"
+							<div className="space-y-6">
+								<div
+									className={`p-6 rounded-xl ${
+										isDark ? "bg-gray-800/50" : "bg-gray-100/50"
 									}`}>
-									🌍 Complete Setup
-								</h4>
-								<p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
-									Domain registration, hosting, SSL certificates, and ongoing
-									maintenance included
-								</p>
-							</div>
+									<h4
+										className={`font-bold text-lg mb-3 ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										🛡️ SSL Certificates
+									</h4>
+									<p
+										className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+										Secure SSL certificates included to protect your website and
+										build trust with your visitors and customers
+									</p>
+								</div>
 
-							<div
-								className={`p-6 rounded-xl ${
-									isDark ? "bg-gray-800/50" : "bg-gray-100/50"
-								}`}>
-								<h4
-									className={`font-bold text-lg mb-3 ${
-										isDark ? "text-white" : "text-gray-900"
+								<div
+									className={`p-6 rounded-xl ${
+										isDark ? "bg-gray-800/50" : "bg-gray-100/50"
 									}`}>
-									📊 Analytics & Insights
-								</h4>
-								<p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
-									Google Analytics setup and monthly performance reports to
-									track your success
-								</p>
+									<h4
+										className={`font-bold text-lg mb-3 ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										📱 Responsive Design
+									</h4>
+									<p
+										className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+										Mobile-first designs that look perfect and function
+										flawlessly on all devices - phones, tablets, and desktops
+									</p>
+								</div>
+
+								<div
+									className={`p-6 rounded-xl ${
+										isDark ? "bg-gray-800/50" : "bg-gray-100/50"
+									}`}>
+									<h4
+										className={`font-bold text-lg mb-3 ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										🛠️ Custom Functionality
+									</h4>
+									<p
+										className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+										Contact forms, galleries, payment integration, user
+										dashboards, and any custom features your business needs
+									</p>
+								</div>
+
+								<div
+									className={`p-6 rounded-xl ${
+										isDark ? "bg-gray-800/50" : "bg-gray-100/50"
+									}`}>
+									<h4
+										className={`font-bold text-lg mb-3 ${
+											isDark ? "text-white" : "text-gray-900"
+										}`}>
+										📈 Google Analytics Integration
+									</h4>
+									<p
+										className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+										Professional Google Analytics setup with conversion
+										tracking, goal monitoring, and detailed performance reports
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -369,7 +670,7 @@ const Services: React.FC<ServicesProps> = ({ isDark }) => {
 						</div>
 					</div>
 
-					{/* Graphic Design */}
+					{/* UI/UX Design & Branding */}
 					<div
 						className={`p-8 rounded-2xl shadow-xl border ${
 							isDark
@@ -387,7 +688,7 @@ const Services: React.FC<ServicesProps> = ({ isDark }) => {
 								className={`text-2xl font-bold ${
 									isDark ? "text-white" : "text-gray-900"
 								}`}>
-								Graphic Design & Branding
+								UI/UX Design
 							</h3>
 						</div>
 
@@ -400,13 +701,14 @@ const Services: React.FC<ServicesProps> = ({ isDark }) => {
 									className={`font-semibold mb-2 ${
 										isDark ? "text-white" : "text-gray-900"
 									}`}>
-									🏷️ Logo & Brand Identity
+									🏷️ Brand Identity
 								</h4>
 								<p
 									className={`text-sm ${
 										isDark ? "text-gray-300" : "text-gray-600"
 									}`}>
-									Professional logo design and complete brand identity packages
+									Professional logo design and complete brand identity that
+									represents your business
 								</p>
 							</div>
 
@@ -418,14 +720,14 @@ const Services: React.FC<ServicesProps> = ({ isDark }) => {
 									className={`font-semibold mb-2 ${
 										isDark ? "text-white" : "text-gray-900"
 									}`}>
-									📋 Marketing Materials
+									📋 Post Banners & Backgrounds
 								</h4>
 								<p
 									className={`text-sm ${
 										isDark ? "text-gray-300" : "text-gray-600"
 									}`}>
-									Business cards, flyers, brochures, and digital marketing
-									assets
+									Eye-catching social media banners, post designs, and custom
+									backgrounds for all platforms
 								</p>
 							</div>
 
@@ -437,21 +739,40 @@ const Services: React.FC<ServicesProps> = ({ isDark }) => {
 									className={`font-semibold mb-2 ${
 										isDark ? "text-white" : "text-gray-900"
 									}`}>
-									🌐 Social Media Graphics
+									🎯 UI/UX Design Theme Based
 								</h4>
 								<p
 									className={`text-sm ${
 										isDark ? "text-gray-300" : "text-gray-600"
 									}`}>
-									Eye-catching banners, posts, and promotional graphics for all
-									platforms
+									Custom user interface and user experience designs tailored to
+									your brand theme and audience
+								</p>
+							</div>
+
+							<div
+								className={`p-4 rounded-lg ${
+									isDark ? "bg-gray-700/50" : "bg-gray-50"
+								}`}>
+								<h4
+									className={`font-semibold mb-2 ${
+										isDark ? "text-white" : "text-gray-900"
+									}`}>
+									🌟 Other Graphic Design as per Demand
+								</h4>
+								<p
+									className={`text-sm ${
+										isDark ? "text-gray-300" : "text-gray-600"
+									}`}>
+									Custom graphic design solutions including flyers, brochures,
+									business cards, and any other visual needs
 								</p>
 							</div>
 						</div>
 
 						<div className="text-center">
 							<a
-								href="mailto:support@bluesproutagency.com?subject=Graphic%20Design%20Quote"
+								href="mailto:support@bluesproutagency.com?subject=UI%2FUX%20Design%20Quote"
 								className={`inline-block px-6 py-3 rounded-lg font-semibold transition-colors ${
 									isDark
 										? "bg-green-600 hover:bg-green-700 text-white"

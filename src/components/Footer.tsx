@@ -1,7 +1,17 @@
 // components/Footer.tsx
 import { useNavigate } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+	FaFacebook,
+	FaInstagram,
+	FaInternetExplorer,
+	FaLinkedin,
+	FaMapMarkedAlt,
+	FaMapMarkerAlt,
+	FaPhone,
+	FaTwitter,
+} from "react-icons/fa";
 import sprtLogo192 from "../assets/sprout-logo-192.png";
+import { FaEnvelope, FaGlobe } from "react-icons/fa6";
 
 export interface FooterProps {
 	isDark: boolean;
@@ -68,10 +78,22 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 							editing.
 						</p>
 						<div className="space-y-2 text-sm">
-							<div>📍 Chino, California, USA</div>
-							<div>📧 support@bluesproutagency.com</div>
-							<div>📞 (657) 217-4737</div>
-							<div>🌐 www.bluesproutagency.com</div>
+							<div className="flex items-center space-x-2">
+								<FaMapMarkerAlt className="text-teal-400" />
+								<span>Chino, California, USA</span>
+							</div>
+							<div className="flex items-center space-x-2">
+								<FaEnvelope className="text-teal-400" />
+								<span>support@bluesproutagency.com</span>
+							</div>
+							<div className="flex items-center space-x-2">
+								<FaPhone className="text-teal-400" />
+								<span>(657) 217-4737</span>
+							</div>
+							<div className="flex items-center space-x-2">
+								<FaGlobe className="text-teal-400" />
+								<span>www.bluesproutagency.com</span>
+							</div>
 						</div>
 					</div>
 
@@ -113,7 +135,7 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
 								<FaFacebook className="w-5 h-5" />
-								<span>Facebook: @bluesproutagency</span>
+								<span>@bluesproutagency</span>
 							</a>
 							<a
 								href="https://instagram.com/bluesproutagency"
@@ -123,7 +145,7 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
 								<FaInstagram className="w-5 h-5" />
-								<span>Instagram: @bluesproutagency</span>
+								<span>@bluesproutagency</span>
 							</a>
 							<a
 								href="https://twitter.com/blusproutagency"
@@ -133,7 +155,7 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
 								<FaTwitter className="w-5 h-5" />
-								<span>Twitter: @blusproutagency</span>
+								<span>@blusproutagency</span>
 							</a>
 							<a
 								href="https://www.linkedin.com/company/blue-sprout-agency/"
@@ -143,7 +165,7 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
 								<FaLinkedin className="w-5 h-5" />
-								<span>Linkedin: @blue-sprout-agency</span>
+								<span>@blue-sprout-agency</span>
 							</a>
 						</div>
 
