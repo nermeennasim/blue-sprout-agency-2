@@ -9,7 +9,7 @@ import {
 	Target,
 	TrendingUp,
 } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 interface HeroProps {
 	isDark: boolean;
@@ -18,16 +18,6 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ isDark }) => {
 	const navigate = useNavigate();
 	const heroRef = useRef<HTMLElement>(null);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			const scrollY = window.scrollY;
-			const windowHeight = window.innerHeight;
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
 
 	// Smooth scroll to contact
 	const handleGetStarted = (e: React.MouseEvent) => {

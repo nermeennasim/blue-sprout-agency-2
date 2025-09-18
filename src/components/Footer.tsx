@@ -3,9 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {
 	FaFacebook,
 	FaInstagram,
-	FaInternetExplorer,
 	FaLinkedin,
-	FaMapMarkedAlt,
 	FaMapMarkerAlt,
 	FaPhone,
 	FaTwitter,
@@ -145,7 +143,7 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
 								<FaInstagram className="w-5 h-5" />
-								<span>@bluesproutagency</span>
+								<span>bluesproutagency</span>
 							</a>
 							<a
 								href="https://twitter.com/blusproutagency"
@@ -155,7 +153,7 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
 								<FaTwitter className="w-5 h-5" />
-								<span>@blusproutagency</span>
+								<span>blusproutagency</span>
 							</a>
 							<a
 								href="https://www.linkedin.com/company/blue-sprout-agency/"
@@ -165,7 +163,7 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
 								<FaLinkedin className="w-5 h-5" />
-								<span>@blue-sprout-agency</span>
+								<span>blue-sprout-agency</span>
 							</a>
 						</div>
 
