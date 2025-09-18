@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
 
 	return (
 		<>
-			{/* Development Banner */}
+			{/* Development Banner
 			<div
 				className={`fixed top-0 left-0 right-0 z-[60] py-2 text-center text-sm font-medium ${
 					isDark
@@ -59,10 +59,10 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
 					</span>
 					<Construction className="w-4 h-4" />
 				</div>
-			</div>
+			</div> */}
 
 			<nav
-				className={`fixed top-10 left-0 right-0 z-50 backdrop-blur-md ${
+				className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md  rounded-lg ${
 					isDark
 						? "bg-gray-900/95 border-gray-700"
 						: "bg-white/95 border-gray-200"

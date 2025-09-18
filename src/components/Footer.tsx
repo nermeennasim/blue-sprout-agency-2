@@ -5,11 +5,10 @@ import {
 	FaInstagram,
 	FaLinkedin,
 	FaMapMarkerAlt,
-	FaPhone,
-	FaTwitter,
+	FaPhone
 } from "react-icons/fa";
 import sprtLogo192 from "../assets/sprout-logo-192.png";
-import { FaEnvelope, FaGlobe } from "react-icons/fa6";
+import { FaEnvelope, FaGlobe,FaXTwitter } from "react-icons/fa6";
 
 export interface FooterProps {
 	isDark: boolean;
@@ -77,19 +76,27 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 						</p>
 						<div className="space-y-2 text-sm">
 							<div className="flex items-center space-x-2">
-								<FaMapMarkerAlt className="text-teal-400" />
-								<span>Chino, California, USA</span>
+								<FaMapMarkerAlt
+									className={isDark ? "text-orange-400" : "text-teal-400"}
+								/>
+								<span>California, USA</span>
 							</div>
 							<div className="flex items-center space-x-2">
-								<FaEnvelope className="text-teal-400" />
+								<FaEnvelope
+									className={isDark ? "text-orange-400" : "text-teal-400"}
+								/>
 								<span>support@bluesproutagency.com</span>
 							</div>
 							<div className="flex items-center space-x-2">
-								<FaPhone className="text-teal-400" />
-								<span>(657) 217-4737</span>
+								<FaPhone
+									className={isDark ? "text-orange-400" : "text-teal-400"}
+								/>
+								<span>(657) 217 4737</span>
 							</div>
 							<div className="flex items-center space-x-2">
-								<FaGlobe className="text-teal-400" />
+								<FaGlobe
+									className={isDark ? "text-orange-400" : "text-teal-400"}
+								/>
 								<span>www.bluesproutagency.com</span>
 							</div>
 						</div>
@@ -132,7 +139,11 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 								className={`flex items-center space-x-2 hover:text-white transition-colors ${
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
-								<FaFacebook className="w-5 h-5" />
+								<FaFacebook
+									className={`w-5 h-5 ${
+										isDark ? "text-orange-400" : "text-teal-400"
+									}`}
+								/>
 								<span>bluesproutagency</span>
 							</a>
 							<a
@@ -142,7 +153,11 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 								className={`flex items-center space-x-2 hover:text-white transition-colors ${
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
-								<FaInstagram className="w-5 h-5" />
+								<FaInstagram
+									className={`w-5 h-5 ${
+										isDark ? "text-orange-400" : "text-teal-400"
+									}`}
+								/>
 								<span>bluesproutagency</span>
 							</a>
 							<a
@@ -152,7 +167,11 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 								className={`flex items-center space-x-2 hover:text-white transition-colors ${
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
-								<FaTwitter className="w-5 h-5" />
+								<FaXTwitter
+									className={`w-5 h-5 ${
+										isDark ? "text-orange-400" : "text-teal-400"
+									}`}
+								/>
 								<span>blusproutagency</span>
 							</a>
 							<a
@@ -162,7 +181,11 @@ export const Footer: React.FC<FooterProps> = ({ isDark }) => {
 								className={`flex items-center space-x-2 hover:text-white transition-colors ${
 									isDark ? "hover:text-orange-400" : "hover:text-teal-400"
 								}`}>
-								<FaLinkedin className="w-5 h-5" />
+								<FaLinkedin
+									className={`w-5 h-5 ${
+										isDark ? "text-orange-400" : "text-teal-400"
+									}	`}
+								/>
 								<span>blue-sprout-agency</span>
 							</a>
 						</div>

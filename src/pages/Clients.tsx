@@ -227,6 +227,7 @@ const Clients: React.FC<ClientsProps> = ({ isDark }) => {
 				<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
 					{[
 						{ name: "React", icon: "⚛️" },
+						{ name: "Next.js", icon: "➡️" },
 						{ name: "TypeScript", icon: "📘" },
 						{ name: ".NET", icon: "🔷" },
 						{ name: "C#", icon: "💜" },
@@ -234,6 +235,15 @@ const Clients: React.FC<ClientsProps> = ({ isDark }) => {
 						{ name: "JavaScript", icon: "📄" },
 						{ name: "HTML/CSS", icon: "🌐" },
 						{ name: "Bootstrap", icon: "🅱️" },
+						{ name: "Figma", icon: "🎨" },
+						{ name: "Wordpress", icon: "📝" },
+						{ name: "Shopify", icon: "🛍️" },
+						{ name: "GitHub", icon: "🐙" },
+						{ name: "Stripe API", icon: "💳" },
+						{ name: "Vercel", icon: "🚀" },
+						{ name: "Netlify", icon: "🌐" },
+						{ name: "Azure", icon: "☁️" },
+						{ name: "Node.js", icon: "🟢" },
 					].map((tech, index) => (
 						<div
 							key={index}
